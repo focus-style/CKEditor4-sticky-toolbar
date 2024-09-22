@@ -30,6 +30,7 @@ CKEDITOR.plugins.add( 'sticky', {
     
     function setToolbars() {
       document.querySelectorAll(".cke").forEach(function(editor) {
+        if(editor.classList.contains('cke_combopanel')) return;
         let inner = editor.querySelector('.cke_inner'),
             content = editor.querySelector('.cke_contents'),
             toolbar = editor.querySelector('.cke_top'); 
