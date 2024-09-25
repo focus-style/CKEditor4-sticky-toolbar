@@ -33,6 +33,7 @@ CKEDITOR.plugins.add( 'sticky', {
         let inner = editor.querySelector('.cke_inner'),
             content = editor.querySelector('.cke_contents'),
             toolbar = editor.querySelector('.cke_top'); 
+        if(!inner || !content || !toolbar) return;
         
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;             
         
